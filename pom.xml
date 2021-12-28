@@ -10,10 +10,24 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>exampleartifactory</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>exampleartifactory</name>
 	<description>exampleartifactory</description>
-	<properties>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>Release Repository</name>
+            <url>http://10.217.88.60:8081/artifactory/maven-libs-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshot Repository</name>
+            <url>http://10.217.88.60:8081/artifactory/maven-libs-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <properties>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
